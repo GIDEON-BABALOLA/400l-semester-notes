@@ -1,0 +1,159 @@
+package com.mycompany.holidayassignment;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author HP
+ */
+public class HOLIDAYASSIGNMENT {
+
+    public static void main(String[] args) {
+        printFirstMap();
+        secondMap();
+        calc();
+        oneDarray();
+        twoDarray();
+    }
+    
+    /* Question 1 */
+    public static void printFirstMap() {
+         /* Single loop */
+          String map = "****====****";
+       for(int row = 1; row < 5; row++) {
+           System.out.println(map);
+       }
+        
+       System.out.println();
+        /* Nested loop */
+        System.out.println("Enter an asterisk:");
+        Scanner input1 = new Scanner(System.in);
+        String val1 = input1.nextLine();
+        System.out.println("Enter an equal to sign:");
+        Scanner input2 = new Scanner(System.in);
+        String val2 = input2.nextLine();
+        
+        for(int row = 1; row <= 4; row++) {
+            for(int col = 1; col <= 12; col++) {
+                if(col < 5 || col >= 9) {
+                    System.out.print(val1);
+                } else {
+                    System.out.print(val2);
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+    
+    /* Question 2 */
+    public static void secondMap() {
+          /* Single loop */
+        String a = "* * * * = = = = = = =";
+        String b = "=  =  = = = = = = = =";
+        System.out.println();
+        for(int row = 1; row < 7; row++) {
+            if(row >= 1 && row <= 3) {
+                System.out.println(a);
+            }else {
+                System.out.println(b);
+            }
+        }
+        System.out.println();
+        
+        /* Nested Loop */
+        System.out.println("Enter an asterisk:");
+        Scanner input1 = new Scanner(System.in);
+        String val1 = input1.nextLine();
+        System.out.println("Enter an equal to sign:");
+        Scanner input2 = new Scanner(System.in);
+        String val2 = input2.nextLine();
+        
+        System.out.println();
+        
+        for(int row = 1; row <= 6; row++) {
+            for (int col = 1; col <= 11; col++) {
+                if((row >= 1 && row <= 3) && (col >= 1 && col <= 4)) {
+                System.out.print(val1 + " ");
+            } else {
+                    System.out.print(val2 + " ");
+               }
+            }
+            System.out.print("\n");
+        }
+    }
+    
+    /* Question 3 */
+    public static void calc() {
+        double[] num = {2, 5, 5, 9, 4, 7, 0, 9, 6, 11, 12};
+        double sum = 0;
+        double square = 0;
+        double median;
+        double mean;
+        for(double val: num) {
+            sum += val;
+        }
+        
+         mean = sum / num.length;
+         
+        if(num.length % 2 == 0){
+           median = (num[num.length/2 - 1] + num[num.length/2])/2;
+        }else {
+           median = num[num.length/2];
+        }
+      
+        for(double val: num) {
+            square += Math.pow((val - mean), 2);
+        }
+        double dev = square/num.length;
+        double standardDev =  Math.sqrt(dev);
+       
+       System.out.println();
+       System.out.println("Mean = " + mean);
+   
+       System.out.println("Median = " + median);
+       
+       System.out.println("Standard deviation = " + standardDev);
+       
+    }
+    
+    /* Question 4 */
+    public static void oneDarray() {
+       int[] numbers = new int[10];
+       Scanner scanner = new Scanner(System.in);
+       
+       System.out.println();
+       for (int i = 0; i < numbers.length; i++) {
+           System.out.println("Enter element [" + i + "]: ");
+           numbers[i] = scanner.nextInt();
+       }
+       
+       System.out.println("You entered");
+       
+       for(int val: numbers) {
+           System.out.print(val + " ");
+       }
+    }
+    
+    /* Question 5 */
+    public static void twoDarray() {
+       int[][] numbers = new int[10][10];
+       Scanner scanner = new Scanner(System.in);
+       
+       System.out.println();
+       for (int i = 0; i < 10; i++) {
+           for (int j = 0; j < 10; j++) {
+           System.out.println("Enter element [" + i + "] [" + j + "]: ");
+           numbers[i][j] = scanner.nextInt();
+          }
+       } 
+       
+       System.out.println("You entered");
+       
+       for(int[] row: numbers) {
+           for (int col: row) {
+           System.out.print(col + " ");
+          }
+           System.out.print("\n");
+       }  
+    }
+}

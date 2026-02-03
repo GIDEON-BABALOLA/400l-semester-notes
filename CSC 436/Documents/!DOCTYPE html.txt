@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+public class SumEvenOdd {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: Size of the array
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+
+        // Initialize the array
+        int[] numbers = new int[n];
+
+        // Input: Array elements
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("Element " + (i + 1) + ": ");
+            numbers[i] = scanner.nextInt();
+        }
+
+        // Initialize sums for even and odd numbers
+        int evenSum = 0;
+        int oddSum = 0;
+
+        // Calculate the sum of even and odd numbers
+        for (int num : numbers) {
+            if (num % 2 == 0) {
+                evenSum += num; // Add to even sum if the number is even
+            } else {
+                oddSum += num; // Add to odd sum if the number is odd
+            }
+        }
+
+        // Output the results
+        System.out.println("Sum of even numbers: " + evenSum);
+        System.out.println("Sum of odd numbers: " + oddSum);
+    }
+}
+
+
+import java.util.Scanner;
+
+public class LCFCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: Two numbers from the user
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        // Ensure numbers are positive
+        num1 = Math.abs(num1);
+        num2 = Math.abs(num2);
+
+        // Variable to store the LCF
+        int lcf = -1;
+
+        // Loop to find the lowest common factor greater than 1
+        for (int i = 2; i <= Math.min(num1, num2); i++) {
+            if (num1 % i == 0 && num2 % i == 0) {
+                lcf = i;
+                break; // Exit the loop once the LCF is found
+            }
+        }
+
+        // Output the result
+        if (lcf != -1) {
+            System.out.println("The LCF of " + num1 + " and " + num2 + " is: " + lcf);
+        } else {
+            System.out.println("No common factor greater than 1 exists for " + num1 + " and " + num2);
+        }
+    }
+}

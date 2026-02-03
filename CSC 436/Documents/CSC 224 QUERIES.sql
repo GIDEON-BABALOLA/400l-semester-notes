@@ -1,0 +1,111 @@
+/*
+CREATE TABLE attendance(
+REGNO INT NOT NULL,
+HELD INT,
+ATTEND INT,
+ATT_SUP INT,
+ATTPER DOUBLE
+);
+
+INSERT INTO attendance
+VALUES(2201364,9,6,8,66.6),
+	  (2201365,6,2,4,33.3),
+      (2201366,9,9,9,100),
+      (2201367,9,8,8,88.9),
+      (2201369,10,10,1,100);
+SELECT * FROM attendance;
+
+SELECT result.REGNO, result.CA, result.EXAM FROM result WHERE result.REGNO IN (SELECT DISTINCT attendance.REGNO
+FROM attendance WHERE( attendance.ATTPER >= 0 AND attendance.ATTPER < 75 ) );
+
+
+
+
+ALTER TABLE student
+ADD COLUMN SURNAME VARCHAR(255) NOT NULL AFTER FULLNAME;
+
+INSERT INTO student(REGNO,SURNAME)
+VALUES(2201364,"Adedayo"),
+      (2201365,"Ojo"),
+      (2201366,"David"),
+      (2201367,"Johnson"),
+      (2201359,"Agbator");
+
+UPDATE student
+SET SURNAME = "Adedayo"
+WHERE REGNO = 2201364;
+
+UPDATE student
+SET SURNAME = "Ojo"
+WHERE REGNO = 2201365;
+UPDATE student
+SET SURNAME = "David"
+WHERE REGNO = 2201366;
+UPDATE student
+SET SURNAME = "Johnson"
+WHERE REGNO = 2201367;
+UPDATE student
+SET SURNAME = "Agbator"
+WHERE REGNO = 2201369;
+
+ALTER TABLE student
+ADD COLUMN CHANGED_SURNAME VARCHAR(50) AFTER SURNAME;
+
+UPDATE student
+SET CHANGED_SURNAME = "Adekunle"
+WHERE REGNO = 2201364;
+UPDATE student
+SET CHANGED_SURNAME = "Emmanuel"
+WHERE REGNO = 2201365;
+
+ALTER TABLE student
+ADD COLUMN DOB DATE NOT NULL
+DEFAULT "2024-01-01" AFTER CHANGED_SURNAME;
+
+UPDATE student
+SET DOB = "2005-05-05"
+WHERE REGNO = 2201364;
+
+UPDATE student
+SET DOB = "2005-08-13"
+WHERE REGNO = 2201365;
+
+UPDATE student
+SET DOB = "2005-01-22"
+WHERE REGNO = 2201366;
+
+UPDATE student
+SET DOB = "2005-09-14"
+WHERE REGNO = 2201367;
+
+UPDATE student
+SET DOB = "2005-09-04"
+WHERE REGNO = 2201369;
+select * FROM student;
+
+UPDATE attendance
+SET ATTPER = (ATTEND/HELD) * 100;
+SELECT * FROM attendance;
+
+
+UPDATE result
+SET TOTAL = CA + EXAM;
+*/
+
+UPDATE result
+SET GRADE =
+    IF(TOTAL >= 70 AND TOTAL <= 100, 'A',
+       IF(TOTAL >= 60 AND TOTAL <= 69.99, 'B',
+          IF(TOTAL >= 50 AND TOTAL <= 59.99, 'C',
+             IF(TOTAL >= 40 AND TOTAL <= 49.99, 'D',
+                IF(TOTAL >= 0 AND TOTAL <= 39.99, 'F', NULL)
+             )
+          )
+       )
+    );
+SELECT * FROM result;
+
+
+
+
+
