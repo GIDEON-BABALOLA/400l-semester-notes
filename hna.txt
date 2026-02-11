@@ -1,0 +1,109 @@
+Dear Students,
+
+Kindly share with the other departments that didnt receive from the mailing list
+
+Success in your exam.
+
+1. A DHCP server is used to assign IP addresses dynamically to the hosts on a network. The address pool is configured with 192.168.10.0/24. There are 3 printers on this network that need to use reserved static IP addresses from the pool. How many IP addresses in the pool are left to be assigned to other hosts?
+2. A host device needs to send a large video file across the network while providing data communication to other users. Which feature will allow different communication streams to occur at the same time, without having a single data stream using all available bandwidth?
+
+3. A MAC address is 48 bits (6 bytes) in length and consists of 12 hexadecimal digits.
+
+4. A message is sent to all hosts on a remote network. Which type of message is it?
+
+5. A network administrator is variably subnetting a network. The smallest subnet has a mask of 255.255.255.248. How many usable host addresses will this subnet provide?
+
+6. A network administrator notices that some newly installed Ethernet cabling is carrying corrupt and distorted data signals. The new cabling was installed in the ceiling close to fluorescent lights and electrical equipment. Which one factor may interfere with the copper cabling and result in signal distortion and data corruption?
+
+7. A router can break broadcast domains.
+
+8. A star network is robust and therefore not prone to faults.
+
+9. A wired laser printer is attached to a home computer and shared for other computers on the home network. What networking model is in use?
+
+10. Common data link layer protocols include Ethernet, PPPoE, and PPP.
+
+11. Contentious behavior requires each end station to monitor for incoming data before attempting to transmit. This process is called what?
+
+12. What is the binary equivalent of the decimal number 232?
+
+13. How many bits are in an IPv4 address?
+
+14. How many host addresses are available on the network 172.16.128.0 with a subnet mask of 255.255.252.0?
+
+15. How many layers are there in the TCP/IP reference model?
+
+16. If a network device has a mask of /28, how many IP addresses are available for hosts?
+
+17. In which version of Spanning Tree Protocol is an edge port configured?
+
+18. Internet Control Message Protocol (ICMP) is designed to facilitate what function?
+
+19. On a home network, which device is most likely to provide dynamic IP addressing to clients?
+
+20. Refer to the exhibit. What is wrong with the displayed termination?
+
+21. What type of cable is required to configure a new Huawei S5700 switch for the first time?
+
+22. The connection-oriented behavior of which protocol involves prior exchanges before communication begins?
+
+23. Which view is NOT available on the Huawei VRP platform?
+
+24. Which of the following is NOT a cabling type used for Gigabit Ethernet transmission?
+
+25. List the seven OSI layers in correct order from bottom to top.
+
+26. __________ is a wildcard, and the Tab key is used as a shortcut to enter commands.
+
+27. What is the port range for IANA well-known ports?
+
+28. What command is used on Huawei VRP to configure the system time and date?
+
+29. What are the functions of the Network Layer?
+
+30. What command is used to access system view on Huawei VRP?
+
+31. What does the IP address 172.17.4.250/24 represent?
+
+32. What happens if part of an FTP message is not delivered?
+
+33. What is a result of connecting two or more switches together?
+
+34. What is switching?
+
+35. What is the complete range of TCP and UDP well-known ports?
+
+36. What is the decimal equivalent of binary 10010101?
+
+37. What is the disadvantage of a tree network topology?
+
+38. What is the name of the Huawei emulator used for configuration?
+
+39. What is the port number of FTP service?
+
+40. What is the port number of HTTPS service?
+
+41. What is the port number of SSH service?
+
+42. What is the prefix length notation for subnet mask 255.255.255.224?
+
+43. What is the primary purpose of SDRAM in a Huawei networking device?
+
+44. What is the primary role of a firewall in a network?
+
+45. What is the Protocol Data Unit (PDU) at Layer 1?
+
+46. What is the Protocol Data Unit (PDU) at Layer 3?
+
+47. What is the Protocol Data Unit (PDU) at Layer 4?
+
+48. What is the purpose of a subnet mask?
+
+49. What is true about a client-server network?
+
+50. What command is used to configure login result information on Huawei devices?
+
+51. What keyboard shortcut is used for CLI help?
+
+52.
+
